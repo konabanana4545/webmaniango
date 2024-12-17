@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字変換ツール</title>
+</head>
+<body>
+    <h1>文字入力ボックス</h1>
+    <!-- 入力フィールド -->
+    <input type="text" id="inputBox" placeholder="ここに入力してください">
+    <!-- 変換ボタン -->
+    <button onclick="convertText()">変換</button>
+    <!-- 結果表示 -->
+    <p>結果: <span id="outputBox"></span></p>
+
+    <script>
+        function convertText() {
+            // 入力ボックスの値を取得
+            const inputText = document.getElementById("inputBox").value;
+
+            // BOAYAROMAが入力された場合にウェブマニアに変換
+            if (inputText === "BOAYAROMA") {
+                document.getElementById("outputBox").textContent = "ウェブマニア";
+            } else {
+                document.getElementById("outputBox").textContent = "変換対象ではありません";
+            }
+        }
+    </script>
+</body>
+</html>
